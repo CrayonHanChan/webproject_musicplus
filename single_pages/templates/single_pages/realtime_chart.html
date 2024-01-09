@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" media="screen">
+    <title>Melon Chart</title>
+</head>
+
+<body>
+    <style>
+        tr th {
+            font-size: 20px; 
+            text-align: center;
+        }
+        h5 {
+            margin: 10px;
+        }
+        table {
+            margin: 20px;
+        }
+    </style>
+
+    {% include 'single_pages/navbar.html' %}
+    <h1>Real-Time Melon Chart</h1>
+    <h5>멜론의 실시간 차트 100을 실시간으로 크롤링하여, 최신 음악 트렌드를 한눈에 파악할 수 있는 서비스를 제공합니다.</h5>
+    <h5>여기서는 각 곡의 앨범 커버, 곡 제목, 가수, 그리고 앨범명까지, 음악에 대한 모든 중요 정보를 쉽게 접할 수 있습니다. </h5>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>순위</th>
+                <th></th>
+                <th>곡 제목</th>
+                <th>가수</th>
+                <th>앨범명</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for song in chart_data %}
+            <tr>
+                <td class="rank">{{ forloop.counter }}</td>
+                <td><img src="{{ song.picture }}"></img></td>
+                <td class="title">{{ song.title }}</td>
+                <td class="artist">{{ song.artist }}</td>
+                <td class="album">{{ song.album }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% include 'single_pages/footer.html' %}
+</body>
+</html>
