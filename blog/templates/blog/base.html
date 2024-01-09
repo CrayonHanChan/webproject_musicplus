@@ -9,8 +9,18 @@
     <style>
         #div_id_content {margin:0;}                      
         #div_id_content label {display:none;} 
-        textarea {width:100%; resize:none !important;}            
+        textarea {width:100%; resize:none !important;}   
+        .full-background {
+            background: url('{% static "images/기타3.jpg" %}') no-repeat center center fixed;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+         
     </style>
+
+        
+
     <script src="https://kit.fontawesome.com/6ed747e910.js" crossorigin="anonymous"></script>    <!-- font awesome에 kit code -->
     
     
@@ -19,7 +29,7 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/main.css' %}" media="screen">
 </head>
-<body>
+<body  class="full-background">
     {% include "blog/navbar.html" %}
     <div class="container pt-5 my-5">  
         <div class="row">
@@ -61,10 +71,10 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div><br><br>
         
 
-    {% include "blog/footer.html" %}
+    {% include "blog/footer_1.html" %}
     
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

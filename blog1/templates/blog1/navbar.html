@@ -24,7 +24,7 @@
         <span class="navbar-text mr-2">{{ user.username }}</span>
         <a href="{% url 'account_logout' %}" class="btn btn-danger">로그아웃</a>
     {% else %}
-        <a href="{% url 'account_login' %}" class="btn btn-primary">로그인</a>
+        <a href="{% url 'account_login' %}" class="btn btn-danger">로그인</a>
     {% endif %}
         </div>
     </nav>

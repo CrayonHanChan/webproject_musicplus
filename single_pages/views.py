@@ -2,10 +2,7 @@
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.shortcuts import render
-#이상형만들기
-from django.shortcuts import render
-from django.http import JsonResponse
-from .models import Song
+
 
 # 로그인 구현
 from allauth.account.views import SignupView  
@@ -72,17 +69,23 @@ def maker(request):
 # 웹크롤링
 from django.shortcuts import render
 from .melon_scraper import get_melon_chart
+from .bugs_scraper import get_bugs_chart
+from .flo_scraper import get_flo_chart
 # from .models import Song
 
 def realtime_chart(request):
     chart_data = get_melon_chart()
-    print('asdsadsadsaasdasda',chart_data)  # 이 부분을 추가하여 데이터 확인
-    return render(request, 'single_pages/realtime_chart.html', {'chart_data': chart_data})
+    chart_data1 = get_bugs_chart()
+    chart_data2 = get_flo_chart()
+    # print(chart_data2)  # 이 부분을 추가하여 데이터 확인
+    return render(request, 'single_pages/realtime_chart.html', {'chart_data': chart_data,'chart_data1': chart_data1,'chart_data2': chart_data2})
 
 def realtime_chart123(request):
     chart_data = get_melon_chart()
-    print('asdsadsadsaasdasda',chart_data)  # 이 부분을 추가하여 데이터 확인
-    return render(request, 'single_pages/123.html', {'chart_data': chart_data})
+    chart_data1 = get_bugs_chart()
+    chart_data2 = get_flo_chart()
+    print('asdsadsadsaasdasda', chart_data, chart_data1, chart_data2,)  # 이 부분을 추가하여 데이터 확인
+    return render(request, 'single_pages/123.html', {'chart_data': chart_data, 'chart_data1': chart_data1, 'chart_data2': chart_data2})
 
 
 # 0105 추가 내용 : 메인페이지에 최신글 띄우고 링크
