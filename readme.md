@@ -109,7 +109,7 @@ SITE_ID = 1 # 사이트 아이디
 
 #### navbar {% load socialaccount %}
 
-===================== 가상환경 접속 후 몇몇 페이지 예시 =====================
+===================== 가상환경 접속 후 몇몇 페이지 리뷰.. =====================
 
 가상환경 파이썬 버전 : Python 3.11.5 (파이썬 버전 3.10 도 되는데 3.8에서는 충돌나서 3.10 이상 환경이 필요)
 
@@ -128,6 +128,8 @@ python manage.py runserver
 
 ![MyMusic](https://github.com/CrayonHanChan/webproject_musicplus/assets/145984937/1536f0fe-0fc2-4be6-b9f6-f8af62dc54de)
 
+
+
 Musicplus의 실시간차트 페이지입니다.
 국내의 유명한 음원사이트인 멜론과 벅스를
 Beautifulsoup 을 활용하여 실시간 차트를 크롤링하여 구현하였습니다.
@@ -135,9 +137,21 @@ Beautifulsoup 을 활용하여 실시간 차트를 크롤링하여 구현하였�
 
 ![1](https://github.com/CrayonHanChan/webproject_musicplus/assets/145984937/8f37cbd7-7e86-451e-ba26-ad01ea77a81c)
 
+
+
 로그인하여 인증된 모든 사용자들은 이곳에서 포스팅을 하거나 댓글을 달 수 있습니다.
 자유롭게 서로 다른 사용자들과 소통할수 있습니다.
 자신이 좋아하는 곡이나 앨범등을 소개할수도 있고
 사이드바에있는 카데고리에서 원하는 장르의 음악을 선택하여 자신의 취향에 맞는 장르의 포스트들만 모아서 볼수도 있습니다.
 
 ![3](https://github.com/CrayonHanChan/webproject_musicplus/assets/145984937/01fb3af4-ad6a-475e-9427-597a6d064ad8)
+
+
+
+
+
+
+
+
+
+
