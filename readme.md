@@ -1,7 +1,7 @@
 ![5](https://github.com/CrayonHanChan/webproject_musicplus/assets/145984937/8a3e30ad-2b9c-447c-bf08-aabc32a72009)
 
 발표영상 : https://drive.google.com/file/d/1mXpVx1TARA5oemlfrnJH8OYMQhwz-Dsf/view 
-
+발표영상 유튜브에서 보기 : https://youtu.be/kxNVtMKqIzI
 
 #### django_class 폴더 생성
 
